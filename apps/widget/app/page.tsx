@@ -1,14 +1,17 @@
-import { add } from "@workspace/math/add"
-import { Input } from "@workspace/ui/components/input"
+"use client"
+
+import { useQuery } from "convex/react"
+import { api } from "@workspace/backend/_generated/api"
 
 export default function Page() {
+  const users = useQuery(api.users.getMany)
+
   return (
     <div className="flex min-h-svh p-6">
       <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Hello Apps widget!</h1>
-          <p>{add(3, 3)}</p>
-          <Input />
+        <div className="mx-auto w-full max-w-sm">
+          <h1 className="font-medium">Hello Apps Widget!</h1>
+          {JSON.stringify(users, null, 2)}
         </div>
       </div>
     </div>
