@@ -1,14 +1,14 @@
-import { Button } from "@workspace/ui/components/button"
 import { add } from "@workspace/math/add"
+import { Input } from "@workspace/ui/components/input"
 
 export default function Page() {
   return (
     <div className="flex min-h-svh p-6">
       <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
         <div>
-          <h1 className="font-medium">Hello Apps Web!</h1>
-          <Button size="sm">Add</Button>
-          <p>{add(2, 2)}</p>
+          <h1 className="font-medium">Hello Apps widget!</h1>
+          <p>{add(3, 3)}</p>
+          <Input />
         </div>
       </div>
     </div>
