@@ -1,7 +1,5 @@
 import { SignIn } from "@clerk/nextjs"
 
-const page = () => {
+export const SignInView = () => {
   return <SignIn />
 }
-
-export default page
