@@ -1,8 +1,7 @@
 "use client"
 
 import { Authenticated, Unauthenticated } from "convex/react"
-import { Button } from "@workspace/ui/components/button"
-import { OrganizationSwitcher, SignInButton, UserButton } from "@clerk/nextjs"
+import { SignInButton } from "@clerk/nextjs"
 
 export default function Page() {
   return (
@@ -12,8 +11,6 @@ export default function Page() {
           <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
             <div className="mx-auto w-full max-w-sm">
               <h1 className="font-medium">Hello Apps Web!</h1>
-              <UserButton />
-              <OrganizationSwitcher hidePersonal />
             </div>
           </div>
         </div>
