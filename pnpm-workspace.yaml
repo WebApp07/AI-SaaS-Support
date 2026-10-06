@@ -2,6 +2,14 @@ packages:
   - "apps/*"
   - "packages/*"
 
+# @hookform/resolvers imports zod/v4/core but doesn't declare zod as a peer,
+# so pnpm never links zod into its directory and resolution falls back to the
+# hidden-hoisted zod@3.24.2 (via shadcn), which has no v4 exports.
+packageExtensions:
+  "@hookform/resolvers":
+    peerDependencies:
+      zod: "*"
+
 allowBuilds:
   sharp: true
   unrs-resolver: true
