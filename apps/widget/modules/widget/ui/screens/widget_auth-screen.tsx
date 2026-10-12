@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
 import { WidgetHeader } from "../components/widget-header"
+import { MenuIcon } from "lucide-react"
 import {
   Form,
   FormControl,
@@ -74,9 +75,14 @@ export const WidgetAuthScreen = () => {
   return (
     <>
       <WidgetHeader>
-        <div className="flex flex-col justify-between gap-y-2 px-2 py-6 font-semibold">
-          <p className="text-3xl">Hi there! </p>
-          <p className="text-lg">Let&apos;s get you started</p>
+        <div className="flex items-center justify-between">
+          <div className="flex flex-col justify-between gap-y-2 px-2 py-6 font-semibold">
+            <p className="text-3xl">Hi there! </p>
+            <p className="text-lg">Let&apos;s get you started</p>
+          </div>
+          <Button size="icon" variant="transparent">
+            <MenuIcon />
+          </Button>
         </div>
       </WidgetHeader>
       <Form {...form}>
